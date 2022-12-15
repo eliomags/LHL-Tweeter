@@ -1,0 +1,26 @@
+.tweetbtn {
+  border: none;
+  background-color: blue;
+  color: aliceblue;
+}
+
+.bottom-of-the-tweet {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  border: none;
+  background: none;
+  border-bottom: 3px solid;
+  width: 100%;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+.negative {
+  color: red;
+}

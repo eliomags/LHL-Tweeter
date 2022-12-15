@@ -1,0 +1,44 @@
+<!-- Create an HTML file with a textarea input.
+Add some event listeners for the different keyboard events listed above.
+Pass the event object into your callback function so you can console.log it and examine it.
+Add a console.log statement to each event listener's callback function something to show you an event has happened. -->
+
+<html>
+
+<head>
+  <title>Keyboard Event Listeners</title>
+</head>
+
+<body>
+  <textarea id="input"></textarea>
+  <script>
+    const input = document.getElementById('input');
+
+    // Keydown event listener
+    input.addEventListener('keydown', (event) => {
+      console.log('A key was pressed:', event);
+    });
+
+    // Keydown event listener 2
+    input.addEventListener('keydown', (event) => {
+      console.log('A key was pressed:', event);
+    });
+
+    // Keypress event listener
+    input.addEventListener('keypress', (event) => {
+      console.log('A key was pressed and released:', event);
+    });
+
+    // Keyup event listener
+    input.addEventListener('keyup', (event) => {
+      console.log('A key was released:', event);
+    });
+
+    // Input event listener
+    input.addEventListener('input', (event) => {
+      console.log('Input was received:', event);
+    });
+  </script>
+</body>
+
+</html>
