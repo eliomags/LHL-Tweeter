@@ -1,0 +1,58 @@
+article.tweet {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.img-name {
+  display: flex;
+  align-items: center;
+}
+
+.img-name img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.tweet footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet footer .date {
+  color: gray;
+  font-size: .8rem;
+}
+
+.tweet footer .action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tweet footer i {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: blue;
+}
+
+.tweet:hover {
+  /* box-shadow: 0 0 10px #ccc; */
+  box-shadow: 2px 2px 0 2px #ccc;
+}
+
+.tweet footer .action i:hover {
+  color: orange;
+  /* change the color of the icon when hovered */
+  cursor: pointer;
+  /* change the cursor to pointer */
+}
