@@ -57,6 +57,7 @@ $(document).ready(function () {
       data: formData,
       success: function (response) {
         $("#tweet-text").val("");
+        $(".counter").val(140);
         $.get("/tweets", (res) => {
           renderTweets(res.slice(-1));
         });
