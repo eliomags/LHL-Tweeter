@@ -30,13 +30,16 @@ const data = [
   }
 ]
 
+
 $(document).ready(function() {
   
   const renderTweets = function(tweets) {
     // loops through tweets
     for (let i = 0; i < tweets.length; i++) {
+      let tweet = tweets[i];
+      // let timeAgo = timeago.fotmat(tweet.created_at);
       // calls createTweetElement for each tweet
-      let $tweet = createTweetElement(tweets[i]);
+      let $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
       
       // console.log($tweet);
@@ -57,7 +60,7 @@ $(document).ready(function() {
         <p>${tweet.content.text}</p>
         <hr>
         <footer>
-          <div class="date">${tweet.created_at}</div>
+          <div class="date">${timeago.format(tweet.created_at)}</div>
           <div class="action">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -69,5 +72,35 @@ $(document).ready(function() {
 }
 
 renderTweets(data);
+
+$("form").submit(function(event) {
+  event.preventDefault();
+  let text = $("#tweet-text").val();
+  if (text === "" || text === null) {
+  alert("Please enter a tweet before submitting.");
+  } else if (text.length > 140) {
+  alert("Your tweet is too long. Please limit it to 140 characters.");
+  } else {
+  let formData = $(this).serialize();
+  $.ajax({
+  type: "POST",
+  url: "/tweets",
+  data: formData,
+  success: function(response) {
+  console.log(response);
+  },
+  error: function(error) {
+  console.log(error);
+  }
+  });
+  $("#tweet-text").val("");
+  }
+  });
+
+function loadTweets() {
+  $.get("/tweets", function(data) {
+      console.log(data);
+  });
+}
 
 });
