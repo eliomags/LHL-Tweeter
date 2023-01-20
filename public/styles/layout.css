@@ -3,7 +3,38 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ html {
+  box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  display: flex;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+
+main {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 5% 5%;
+}
  /* Mobile and Tablet Styles */
 @media only screen and (max-width: 1024) {
 
@@ -38,44 +69,5 @@
 }
   
 
- html {
-  box-sizing: border-box;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-/*
- * Global layout stuff
- */
-
-body {
-  display: flex;
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  /* align-items: center; */
-  flex-direction: column;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-/* Style the <main> element to be:
-
-90% of the width of its parent element
-center aligned to the body
-the same background colour as the <body> element */
-main {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 0 5% 5%;
-}
 
