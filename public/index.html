@@ -49,6 +49,7 @@
       });
     });
   </script> -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
 
 <body>
@@ -64,17 +65,18 @@
       </div>
     </div>
   </nav>
-  <header class="main-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Your Name</h2>
-    </div>
-  </header>
+  <div id="proftwit">
+    <header class="main-header">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+       <h2>Your Name</h2>
+      </div>
+    </header>
   <!-- Page-specific (main) content here -->
-  <main class="container">
+    <main class="container">
     <div class="error-message" id="error-msg" style="display:none;"></div>
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
@@ -89,7 +91,8 @@
     <hr>
     <section id="tweets-container">
     </section>
-  </main>
+    </main>
+</div>
 </body>
 
 </html>

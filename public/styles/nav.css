@@ -5,31 +5,68 @@ Full width of the viewport
 <span> within the <nav> uses Bungee as its default font-family
 1.5ems of space on the right and left between the content and the edges */
 
-nav {
-  font-family: 'Bungee', cursive;
-  display: flex;
-  height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
+/* Mobile and Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  nav {
+    font-family: 'Bungee', cursive;
+    display: flex;
+    height: 120px;
+    background-color: #94c7d4;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+  }
+  
+  
+  .action {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 70%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .fa-solid {
+    display: flex;
+    color: red;
+    justify-content: center;
+  }
 }
 
-
-.action {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 70%;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.fa-solid {
-  display: flex;
-  color: red;
-  justify-content: center;
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    font-family: 'Bungee', cursive;
+    display: flex;
+    height: 120px;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+  }
+  
+  
+  .action {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 70%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .fa-solid {
+    display: flex;
+    color: red;
+    justify-content: center;
+  }
+  
 }

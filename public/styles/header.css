@@ -3,15 +3,36 @@ The avatar should be centered vertically and horizontally (Hint: the justify-con
 The name should be centered below the avatar
 The background-color should be a different colour than the nav and the body */
 
+/* Mobile and Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  .main-header {
+    display: flex;
+    height: 400px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #94c7d4;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    margin-top: 120px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
 .main-header {
   display: flex;
+  
   height: 400px;
-  width: 100%;
+  width: 33vw;
+  /* float: left; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #94c7d4;
   background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  margin-top: 120px;
+
+}
 }
