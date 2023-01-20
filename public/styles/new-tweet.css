@@ -24,3 +24,12 @@
 .negative {
   color: red;
 }
+
+.error-message {
+  margin-top: 5px;
+  border: 1px solid red;
+  color: red;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}

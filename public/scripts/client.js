@@ -30,6 +30,13 @@
 //   }
 // ]
 
+// Escape Function to prevent XSS
+const escapeF = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 $(document).ready(function () {
   function loadTweets() {
     $.get("/tweets", function (data) {
@@ -42,11 +49,13 @@ $(document).ready(function () {
     event.preventDefault();
     let text = $("#tweet-text").val();
     if (text === "" || text === null) {
-      alert("Please enter a tweet before submitting.");
+      $("#error-msg").text("Please enter a tweet before submitting.");
+      $("#error-msg").slideDown();
+      // alert("Please enter a tweet before submitting.");
       return;
     }
     if (text.length > 140) {
-      alert("Your tweet is too long. Please limit it to 140 characters.");
+      // alert("Your tweet is too long. Please limit it to 140 characters.");
       return;
     }
     let formData = $(this).serialize();
@@ -91,7 +100,7 @@ const createTweetElement = function (tweet) {
       </div>
             <span>${tweet.user.handle}</span>
           </header>
-          <p>${tweet.content.text}</p>
+          <p>${escapeF(tweet.content.text)}</p>
           <hr>
           <footer>
             <div class="date">${timeago.format(tweet.created_at)}</div>
