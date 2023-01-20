@@ -6,8 +6,8 @@ $(document).ready(function () {
     $(this).parent().find(".counter").val(remainingChar);
     if (remainingChar < 0) {
       $(this).parent().find(".counter").addClass("negative");
-      $("#error-msg").text(
-        "Your tweet is too long. Please limit it to 140 characters."
+      $("#error-msg").html(
+        "<i class='fas fa-exclamation-triangle'></i>Your tweet is too long. Please limit it to 140 characters! <i class='fas fa-exclamation-triangle'></i>"
       );
       $("#error-msg").slideDown();
     } else {

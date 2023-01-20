@@ -49,7 +49,9 @@ $(document).ready(function () {
     event.preventDefault();
     let text = $("#tweet-text").val();
     if (text === "" || text === null) {
-      $("#error-msg").text("Please enter a tweet before submitting.");
+      $("#error-msg").html(
+        "<i class='fas fa-exclamation-triangle'></i>Please enter a tweet before submitting!<i class='fas fa-exclamation-triangle'></i>"
+      );
       $("#error-msg").slideDown();
       // alert("Please enter a tweet before submitting.");
       return;
